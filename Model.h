@@ -7,13 +7,16 @@
 
 class Model {
 private:
-    std::vector<float> vert = {
+    std::vector<float> defaultVert = {
         -0.5f, -0.5f, 0.0f,
          0.5f, -0.5f, 0.0f,
          0.0f,  0.5f, 0.0f
     };
 
-    std::vector<unsigned int> indices = { 0, 1, 2 };
+    std::vector<unsigned int> defaultIndices = { 0, 1, 2 };
+
+    std::vector<float> vert;
+    std::vector<unsigned int> indices;
 
     Mesh* mesh;
     

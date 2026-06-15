@@ -79,5 +79,8 @@
     <None Include="default.frag">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="README.md">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

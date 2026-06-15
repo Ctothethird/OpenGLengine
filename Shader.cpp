@@ -100,32 +100,15 @@ GLuint Shader::getShaderProgramID() const
 
 void Shader::setInt(const char* name, int value) const
 {
-	glUniform1i(
-		glGetUniformLocation(shaderProgramID, name),
-		value
-	);
+	glUniform1i(glGetUniformLocation(shaderProgramID, name), value);
 }
 
-void Shader::setVec3(
-	const char* name,
-	const glm::vec3& value) const
+void Shader::setVec3(const char* name, const glm::vec3& value) const
 {
-	glUniform3f(
-		glGetUniformLocation(shaderProgramID, name),
-		value.x,
-		value.y,
-		value.z
-	);
+	glUniform3f(glGetUniformLocation(shaderProgramID, name), value.x, value.y, value.z);
 }
 
-void Shader::setMat4(
-	const char* name,
-	const glm::mat4& value) const
+void Shader::setMat4(const char* name, const glm::mat4& value) const
 {
-	glUniformMatrix4fv(
-		glGetUniformLocation(shaderProgramID, name),
-		1,
-		GL_FALSE,
-		glm::value_ptr(value)
-	);
+	glUniformMatrix4fv(glGetUniformLocation(shaderProgramID, name), 1, GL_FALSE, glm::value_ptr(value));
 }

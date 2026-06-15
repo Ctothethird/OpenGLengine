@@ -4,7 +4,6 @@
 #include "Shader.h"
 #include "Render.h"
 #include "Model.h"
-#include "KeyboardInput.h"
 
 class GLengine {
 private:
@@ -12,7 +11,6 @@ private:
     Render* render = new Render();
 
 public:
-    KeyboardInput keyInput = KeyboardInput(*window);
 
     GLengine();
     ~GLengine();

@@ -7,19 +7,19 @@ class Window {
 private:
 	GLFWwindow* window = nullptr;
 	
-	int windowWidth;
-	int windowHeight;
-	int oldWindowWidth;
-	int oldWindowHeight;
+	int windowWidth = 0;
+	int windowHeight = 0;
+	int oldWindowWidth = 0;
+	int oldWindowHeight = 0;
 	bool isFullScreen = false;
 
 	const char* windowTitle;
 
-	GLFWmonitor* monitor;
-	const GLFWvidmode* monitorInfo;
+	GLFWmonitor* monitor = nullptr;
+	const GLFWvidmode* monitorInfo = nullptr;
 
 public:
-	Window(int InitialWidth, int InitialHeight, const char* InitialTitle);
+	Window(int InitialWidth = 800, int InitialHeight = 800, const char* InitialTitle = "Title");
 	~Window();
 	void swapBuffer();
 	void pollEvent();

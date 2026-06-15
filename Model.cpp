@@ -2,7 +2,7 @@
 #include "Transform.h"
 
 Model::Model(const Shader& shader, glm::vec3 position)
-    : shader(shader), mesh(new Mesh(vert, indices))
+    : shader(shader), mesh(new Mesh(defaultVert, defaultIndices))
 {
     transform.setPosition(position);
 }
@@ -25,6 +25,8 @@ const Shader& Model::getShader() const
 void Model::setMesh(const std::vector<float>& vertices, const std::vector<unsigned int>& indices)
 {
     delete mesh;
+    vert = vertices;
+    this->indices = indices;
     mesh = new Mesh(vertices, indices);
 }
 

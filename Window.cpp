@@ -81,7 +81,14 @@ void Window::setSize(int width, int height){
 void Window::setFullScreen(){
 	glfwSetWindowMonitor(window, monitor, 0, 0, monitorInfo->width, monitorInfo->height, monitorInfo->refreshRate);
 	isFullScreen = true;
-	glViewport(0, 0, windowWidth, windowHeight);
+
+	oldWindowHeight = windowHeight;
+	oldWindowWidth = windowWidth;
+
+	windowWidth = monitorInfo->width;
+	windowHeight = monitorInfo->height;
+	
+	glViewport(0, 0, monitorInfo->width, monitorInfo->height);
 }
 
 void Window::setTitle(const char* title){
