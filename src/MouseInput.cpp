@@ -1,4 +1,4 @@
-#include "include/MouseInput.h"
+#include "MouseInput.h"
 
 MouseInput::MouseInput(const Window& window)
     : window(window.getGLFWwindow())

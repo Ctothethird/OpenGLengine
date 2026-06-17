@@ -9,8 +9,6 @@ int main()
     Model triangle(shader, glm::vec3(0.0f, 0.0f, 0.0f));
     triangle.setColor(glm::vec3(1.0f, 0.0f, 0.0f));
 
-    Window& window = engine.getWindow();
-
     while (!engine.getWindow().getWindowShouldClose())
     {
         engine.update();
