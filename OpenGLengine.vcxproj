@@ -135,7 +135,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Camera.cpp" />
     <ClCompile Include="glad.c" />
+    <ClCompile Include="MouseInput.cpp" />
     <ClCompile Include="src\GLengine.cpp" />
     <ClCompile Include="src\KeyboardInput.cpp" />
     <ClCompile Include="src\main.cpp" />
@@ -152,6 +154,7 @@
     <None Include="shaders\default.vert" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="include\GLengine.h" />
     <ClInclude Include="include\KeyboardInput.h" />
     <ClInclude Include="include\Mesh.h" />
@@ -160,6 +163,7 @@
     <ClInclude Include="include\Shader.h" />
     <ClInclude Include="include\Transform.h" />
     <ClInclude Include="include\Window.h" />
+    <ClInclude Include="MouseInput.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

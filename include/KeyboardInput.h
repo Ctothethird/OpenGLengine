@@ -1,5 +1,6 @@
 #pragma once
 #include "Window.h"
+#include "Camera.h"
 
 class KeyboardInput {
 	//const Window& window;
@@ -7,5 +8,5 @@ class KeyboardInput {
 
 public:
 	KeyboardInput(const Window& windwo);
-	bool isPressed(int key);
+	void update(Camera& camera);
 };
