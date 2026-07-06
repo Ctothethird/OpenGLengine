@@ -3,6 +3,9 @@
 void Transform::translate(glm::vec3 offset){
     position += offset;
 }
+void Transform::translate(Transform &source){
+    this->position += source.position;
+}
 
 void Transform::setPosition(glm::vec3 newPosition){
     position = newPosition;
@@ -10,6 +13,9 @@ void Transform::setPosition(glm::vec3 newPosition){
 
 void Transform::rotate(glm::vec3 angles){
     rotation += angles;
+}
+void Transform::rotate(Transform &source){
+    this->rotation = source.rotation;
 }
 
 void Transform::setRotation(glm::vec3 newRotation){
