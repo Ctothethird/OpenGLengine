@@ -11,7 +11,7 @@ private:
     glm::vec3 scale = glm::vec3(1.0f);
 
 public:
-    void translate(Transform &source)
+    void translate(Transform &source);
     void translate(glm::vec3 offset);
     void setPosition(glm::vec3 newPosition);
 
