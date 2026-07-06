@@ -14,6 +14,7 @@ public:
     void translate(glm::vec3 offset);
     void setPosition(glm::vec3 newPosition);
 
+    void rotate(Transform &source);
     void rotate(glm::vec3 angles);
     void setRotation(glm::vec3 newRotation);
 
